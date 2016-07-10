@@ -64,7 +64,7 @@ if [ `id -u` = 0 ]; then
   echo "Running as non-root..."
   chown -R $DEFAULT_ES_USER /data
   set -x
-  su -c "$CMD" - $DEFAULT_ES_USER
+  su -c "$CMD" $DEFAULT_ES_USER
 else
   $CMD
 fi
